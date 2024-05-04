@@ -1,3 +1,7 @@
+
+# Set the default target
+TARGET = spinningcubeV1
+
 # Compiler
 CXX = g++
 
@@ -8,16 +12,19 @@ CXXFLAGS = -std=c++11
 LIBS = -losg -losgViewer -losgDB -losgUtil -losgGA -lOpenThreads
 
 # Targets
-all: 
+all:
 
 make:
-    $(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE) $(LIBS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE) $(LIBS)
 
-run:
-    ./$(TARGET)
+run: 
+	./$(TARGET)
 
 clean:
-    rm -f $(TARGET)
+	rm -f $(TARGET)
 
 .PHONY: all make run clean
 
+# Add a rule for compiling individual executables
+%: %.cpp
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LIBS)
