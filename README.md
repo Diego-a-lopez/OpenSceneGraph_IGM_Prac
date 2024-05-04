@@ -24,7 +24,11 @@ Este código es parte de una tarea para el curso IGM en el programa MUEI en la U
 #### Usando Makefile
 Para compilar el código usando el Makefile proporcionado, ejecute el siguiente comando:
 ```
-make <filename>
+make
+```
+O usando make `<nombre_de_archivo>` para las versiones anteriores
+```
+make <nombre_de_archivo>
 ```
 Reemplace `<nombre_de_archivo>` con el nombre del archivo fuente sin la extensión (`spinningcubeVx`).
 
@@ -36,9 +40,9 @@ g++ -o <nombre_ejecutable> <archivo_fuente> -losg -losgViewer -losgDB -losgUtil 
 ```
 ### Cómo Ejecutar
 Para ejecutar el ejecutable compilado, use el siguiente comando:
-Reemplace `<nombre_ejecutable>` con el nombre del ejecutable compilado.
+(Este comando solo hace run al ultimo archivo el cual esta cargado en el makefile como la variable TARGET)
 ```
-make run <nombre_de_archivo>
+make run
 ```
 #### Ejecución Manual
 Alternativamente, puede ejecutar manualmente el código utilizando el siguiente comando:

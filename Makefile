@@ -1,6 +1,6 @@
 
 # Set the default target
-TARGET = spinningcubeV1
+TARGET = spinningcubeV2
 
 
 # Compiler
