@@ -2,6 +2,7 @@
 # Set the default target
 TARGET = spinningcubeV1
 
+
 # Compiler
 CXX = g++
 
@@ -12,10 +13,10 @@ CXXFLAGS = -std=c++11
 LIBS = -losg -losgViewer -losgDB -losgUtil -losgGA -lOpenThreads
 
 # Targets
-all:
+all: make
 
 make:
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE) $(LIBS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(TARGET).cpp $(LIBS)
 
 run: 
 	./$(TARGET)
